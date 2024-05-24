@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Contract } from "ethers";
 import abi from "../abi.json";
 
-const Erc20Connect = ({ name, symbol, signer, setContract }) => {
+const Erc20Connect = ({ name, signer, setContract }) => {
   const [contractAddress, setContractAddress] = useState("");
 
   const onClickContract = () => {
@@ -15,12 +15,7 @@ const Erc20Connect = ({ name, symbol, signer, setContract }) => {
     <div className="flex w-full items-start">
       <div className="flex flex-col gap-2 grow">
         <div className="ml-1 text-lg font-bold">
-          ERC20 연결{" "}
-          {name && (
-            <>
-              완료<span className="font-black ml-2">{name}</span>({symbol})
-            </>
-          )}
+          ERC20 연결 {name && "완료"}
         </div>
         <input
           className="input-style"

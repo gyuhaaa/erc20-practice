@@ -1,12 +1,27 @@
 import { useEffect, useState } from "react";
 import MetamaskButton from "./components/MetamaskButton";
 import Erc20Connect from "./components/Erc20Connect";
+import Balance from "./components/Balance";
 
 const App = () => {
   const [signer, setSigner] = useState();
   const [contract, setContract] = useState();
   const [name, setName] = useState();
   const [symbol, setSymbol] = useState();
+
+  const onClickBalance = async () => {
+    try {
+      if (!balanceAddress) return;
+
+      const response = await contract.balanceOf(balanceAddress);
+
+      console.log(response);
+
+      setBalance(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const getNameSymbol = async () => {
     try {
@@ -34,12 +49,8 @@ const App = () => {
           <div className="box-style text-center">
             0x250368BcD73b5B50B8Bdb1F1B3eFa8Bc64F3AEb5
           </div>
-          <Erc20Connect
-            name={name}
-            symbol={symbol}
-            signer={signer}
-            setContract={setContract}
-          />
+          <Erc20Connect name={name} signer={signer} setContract={setContract} />
+          {name && <Balance name={name} symbol={symbol} contract={contract} />}
         </div>
       )}
     </div>
