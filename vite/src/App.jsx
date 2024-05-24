@@ -35,9 +35,7 @@ const App = () => {
       {signer && (
         <div className="mt-16 flex flex-col gap-8 grow max-w-xl w-full">
           <div className="box-style text-center">
-            컨트랙트 / 지갑 0x77D2DAC005A952eF61AbC3D5b460bF60c805E790
-            0x1AF50EB750aea2CC095A06dF301737f4057fB100
-            0x250368BcD73b5B50B8Bdb1F1B3eFa8Bc64F3AEb5
+            컨트랙트 / 지갑 0x250368BcD73b5B50B8Bdb1F1B3eFa8Bc64F3AEb5
             0x2FFA65948795F91D2FcB6E10c3F8cc4440d416a6
           </div>
           <Erc20Connect name={name} signer={signer} setContract={setContract} />
