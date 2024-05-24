@@ -451,7 +451,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/MintToken.sol": "MintToken"
+			"MintToken.sol": "MintToken"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -505,7 +505,7 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/MintToken.sol": {
+		"MintToken.sol": {
 			"keccak256": "0xe7559795346f0c535038cf6c833cf0be12c89359e3f0e8e58da7e7f401673021",
 			"license": "MIT",
 			"urls": [
